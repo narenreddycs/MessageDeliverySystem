@@ -8,9 +8,15 @@
 COMMAND_SEPARATOR = ':'
 LIST_SEPARATOR = ','
 MSG_SEPARATOR = '|'
+
+
 	
 class Message(object):
-
+	
+	IdentityMCode = 0
+	ListMCode = 1
+	RelayMCode = 2
+	
 	def __init__(self, mId):
 		self.mId = mId
 		
@@ -38,10 +44,14 @@ class ListMessage(Message):
 		return LIST_SEPARATOR.join(self.list)
 
 class RelayMessage(Message):
-	def __init__(self, msg, list):
+	def __init__(self, msg, l=None):
 		self.msg = msg
-		self.list = list
+		self.list = l
+		if(isinstance(self.list, list)):
+			self.list = LIST_SEPARATOR.join(self.list)
 		super(RelayMessage, self).__init__(2)
 		
 	def payload(self):
-		return MSG_SEPARATOR.join([self.msg, LIST_SEPARATOR.join(self.list)])
+		if(self.list is None):
+			return self.msg
+		return MSG_SEPARATOR.join([self.msg, self.list])
