@@ -26,3 +26,11 @@ Clients can send relay messages where the body of the message is relayed to the 
 
  - max 255 receivers (user_id:s) per message
  - message body - byte array (text, JSON, binary, or anything), max length 1024 kilobytes
+
+ 
+ HOW TO RUN THE PROJECT - 
+
+ - Start the Server - Run python server.py
+ - Start different Clients - Run python client.py
+
+ 	Now one can enter different commands such as 1 to list all connected clients, 2 to relay message to different clients.
