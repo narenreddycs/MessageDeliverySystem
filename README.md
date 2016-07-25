@@ -28,7 +28,7 @@ Clients can send relay messages where the body of the message is relayed to the 
  - message body - byte array (text, JSON, binary, or anything), max length 1024 kilobytes
 
  
- HOW TO RUN THE PROJECT - 
+HOW TO RUN THE PROJECT - 
 
  - Start the Server - Run python server.py
  - Start different Clients - Run python client.py
