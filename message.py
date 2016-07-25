@@ -1,3 +1,8 @@
+'''
+Message classes for - Identity message, List message, Relay message 
+
+'''
+
 #from enum import Enum
 
 #Message Formats:
@@ -8,7 +13,6 @@
 COMMAND_SEPARATOR = ':'
 LIST_SEPARATOR = ','
 MSG_SEPARATOR = '|'
-
 
 	
 class Message(object):

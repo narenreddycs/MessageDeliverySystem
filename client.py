@@ -1,6 +1,9 @@
 '''
+Client sends messages to the server -
+
 Client:
-Enter Command: <1> for List, <2> to relay message to selected clients
+Enter Command: <1> for List the connected clients, <2> to relay message to selected clients
+
 '''
 
 from thread import *
