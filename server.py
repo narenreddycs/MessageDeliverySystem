@@ -1,7 +1,6 @@
 '''
 Server assigns unique user id to the client and 
 relays incoming message bodies to the clients based on user ID(s) in the message.
-
 '''
 
 import socket,sys
